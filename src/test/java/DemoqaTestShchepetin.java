@@ -16,7 +16,7 @@ public class DemoqaTestShchepetin {
         Configuration.pageLoadStrategy = "eager";
     }
     @Test
-    public void test() {
+    public void DemoqaFillFormTest() {
         open("/automation-practice-form");
 
         $("#firstName").setValue("ilya");
@@ -44,16 +44,16 @@ public class DemoqaTestShchepetin {
 
         $("#submit").click();
 
-        $$("table tr").findBy(text("Student Name")).shouldHave(text("ilya shchepetin"));
-        $$("table tr").findBy(text("Student Email")).shouldHave(text("shchepetin.i@dornet.ru"));
-        $$("table tr").findBy(text("Gender")).shouldHave(text("Male"));
-        $$("table tr").findBy(text("Mobile")).shouldHave(text("8999999999"));
-        $$("table tr").findBy(text("Date of Birth")).shouldHave(text("23 April,1997"));
-        $$("table tr").findBy(text("Subjects")).shouldHave(text("Hindi"));
-        $$("table tr").findBy(text("Hobbies")).shouldHave(text("Sports"));
-        $$("table tr").findBy(text("Picture")).shouldHave(text("QA_GURU.jpg"));
-        $$("table tr").findBy(text("Address")).shouldHave(text("Oktuabriskaya"));
-        $$("table tr").findBy(text("State and City")).shouldHave(text("NCR Delhi"));
+        $(".table-responsive").$(byText("Student Name")).parent().shouldHave(text("ilya shchepetin"));
+        $(".table-responsive").$(byText("Student Email")).parent().shouldHave(text("shchepetin.i@dornet.ru"));
+        $(".table-responsive").$(byText("Gender")).parent().shouldHave(text("Male"));
+        $(".table-responsive").$(byText("Mobile")).parent().shouldHave(text("8999999999"));
+        $(".table-responsive").$(byText("Date of Birth")).parent().shouldHave(text("23 April,1997"));
+        $(".table-responsive").$(byText("Subjects")).parent().shouldHave(text("Hindi"));
+        $(".table-responsive").$(byText("Hobbies")).parent().shouldHave(text("Sports"));
+        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("QA_GURU.jpg"));
+        $(".table-responsive").$(byText("Address")).parent().shouldHave(text("Oktuabriskaya"));
+        $(".table-responsive").$(byText("State and City")).parent().shouldHave(text("NCR Delhi"));
 
     }
 }
