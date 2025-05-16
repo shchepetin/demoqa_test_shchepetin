@@ -1,3 +1,4 @@
+package tests;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -16,7 +17,7 @@ public class DemoqaTestShchepetin {
         Configuration.pageLoadStrategy = "eager";
     }
     @Test
-    public void DemoqaFillFormTest() {
+    public void fillFormTest() {
         open("/automation-practice-form");
 
         $("#firstName").setValue("ilya");
