@@ -1,6 +1,7 @@
-package tests;
+package tests.demoqa;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
+import tests.TestBase;
 
 public class DemoqaTestShchepetinPageObjects extends TestBase {
     @Test
