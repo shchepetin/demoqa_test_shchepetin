@@ -1,4 +1,4 @@
-package tests.demoqa;
+package tests.pageobjects;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import tests.TestBase;
