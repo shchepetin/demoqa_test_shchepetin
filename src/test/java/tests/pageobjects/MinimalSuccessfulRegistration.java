@@ -4,10 +4,11 @@ import pages.RegistrationPage;
 import tests.TestBase;
 
 public class MinimalSuccessfulRegistration extends TestBase {
+    RegistrationPage registrationPage = new RegistrationPage();
+
     @Test
     public void minimalSuccessfulRegistrationTest() {
-        RegistrationPage RegistrationPage = new RegistrationPage()
-                .openPage()
+        registrationPage.openPage()
                 .setFirstName("ilya")
                 .setLastName("shchepetin")
                 .setEmail("shchepetin.i@dornet.ru")

@@ -6,6 +6,8 @@ import tests.TestBase;
 import static utils.RandomUtils.*;
 
 public class FakerTests extends TestBase {
+    RegistrationPage registrationPage = new RegistrationPage();
+
     @Test
     void fullRegistrationTest() {
         String firstName = randomFirstName();
@@ -22,8 +24,7 @@ public class FakerTests extends TestBase {
         String state = randomState();
         String city = randomCity(state);
 
-        RegistrationPage RegistrationPage = new RegistrationPage()
-                .openPage()
+        registrationPage.openPage()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setEmail(email)
@@ -58,8 +59,7 @@ public class FakerTests extends TestBase {
         String gender = randomGender();
         String phone = randomPhone();
 
-        RegistrationPage RegistrationPage = new RegistrationPage()
-                .openPage()
+        registrationPage.openPage()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setEmail(email)

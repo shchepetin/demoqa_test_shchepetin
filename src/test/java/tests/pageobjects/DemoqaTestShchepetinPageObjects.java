@@ -4,10 +4,11 @@ import pages.RegistrationPage;
 import tests.TestBase;
 
 public class DemoqaTestShchepetinPageObjects extends TestBase {
+RegistrationPage registrationPage = new RegistrationPage();
+
     @Test
     public void fillFormTestPageObjects() {
-        RegistrationPage RegistrationPage = new RegistrationPage()
-                .openPage()
+        registrationPage.openPage()
                 .setFirstName("ilya")
                 .setLastName("shchepetin")
                 .setEmail("shchepetin.i@dornet.ru")

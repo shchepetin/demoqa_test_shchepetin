@@ -4,10 +4,11 @@ import pages.RegistrationPage;
 import tests.TestBase;
 
 public class NegativeTest extends TestBase{
+    RegistrationPage registrationPage = new RegistrationPage();
+
     @Test
     public void invalidEmailTest() {
-        RegistrationPage RegistrationPage = new RegistrationPage()
-                .openPage()
+        registrationPage.openPage()
                 .setFirstName("ilya")
                 .setLastName("shchepetin")
                 .setEmail("shchepetin.idornet.ru")
