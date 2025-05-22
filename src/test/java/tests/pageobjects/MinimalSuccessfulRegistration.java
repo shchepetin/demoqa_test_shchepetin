@@ -9,6 +9,7 @@ public class MinimalSuccessfulRegistration extends TestBase {
     @Test
     public void minimalSuccessfulRegistrationTest() {
         registrationPage.openPage()
+                .removeBanner()
                 .setFirstName("ilya")
                 .setLastName("shchepetin")
                 .setEmail("shchepetin.i@dornet.ru")

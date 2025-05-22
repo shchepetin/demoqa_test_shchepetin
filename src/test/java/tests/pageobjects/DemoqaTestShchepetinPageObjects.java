@@ -9,6 +9,7 @@ RegistrationPage registrationPage = new RegistrationPage();
     @Test
     public void fillFormTestPageObjects() {
         registrationPage.openPage()
+                .removeBanner()
                 .setFirstName("ilya")
                 .setLastName("shchepetin")
                 .setEmail("shchepetin.i@dornet.ru")

@@ -25,6 +25,7 @@ public class FakerTests extends TestBase {
         String city = randomCity(state);
 
         registrationPage.openPage()
+                .removeBanner()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setEmail(email)
@@ -60,6 +61,7 @@ public class FakerTests extends TestBase {
         String phone = randomPhone();
 
         registrationPage.openPage()
+                .removeBanner()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setEmail(email)

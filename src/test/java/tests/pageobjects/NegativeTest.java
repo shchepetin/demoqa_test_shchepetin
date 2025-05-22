@@ -9,6 +9,7 @@ public class NegativeTest extends TestBase{
     @Test
     public void invalidEmailTest() {
         registrationPage.openPage()
+                .removeBanner()
                 .setFirstName("ilya")
                 .setLastName("shchepetin")
                 .setEmail("shchepetin.idornet.ru")
