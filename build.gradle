@@ -48,11 +48,3 @@ task simple_test(type: Test) {
         includeTags("Jenkins")
     }
 }
-
-test {
-    systemProperties = [
-            "selenide.browser": "chrome",
-            "webdriver.chrome.driver": "/usr/local/bin/chromedriver",
-            "selenide.headless": "true"
-    ]
-}
