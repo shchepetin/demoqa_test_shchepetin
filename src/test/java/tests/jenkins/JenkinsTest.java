@@ -62,3 +62,4 @@ public class JenkinsTest extends TestBaseHW12 {
             $(".table-responsive").$(byText("State and City")).parent().shouldHave(text("NCR Delhi"));
         });
     }
+}
