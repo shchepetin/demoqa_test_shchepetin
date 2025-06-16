@@ -21,9 +21,9 @@ public class TestBaseHW12 {
     @BeforeAll
     static void installConfiguration() {
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = System.getProperty("screenResolution", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "127.0");
+        Configuration.browserSize = System.getProperty("browser.size", "1920x1080");
+        Configuration.browserVersion = System.getProperty("browser.version", "128.0");
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
         Configuration.remote = String.format(
