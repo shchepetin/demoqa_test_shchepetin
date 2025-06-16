@@ -14,20 +14,16 @@ import java.util.Map;
 public class TestBaseHW12 {
 
     @BeforeEach
-    public void beforeEach() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+    void addAllureListener() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
     @BeforeAll
-    static void installСonfiguration() {
-        String browser = System.getProperty("browser", "chrome");
-        String browserVersion = System.getProperty("browserVersion", "127.0");
-        String screenResolution = System.getProperty("screenResolution", "1920x1080");
-
+    static void installConfiguration() {
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = screenResolution;
-        Configuration.browser = browser;
-        Configuration.browserVersion = browserVersion;
+        Configuration.browserSize = System.getProperty("screenResolution", "1920x1080");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "127.0");
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
         Configuration.remote = String.format(
@@ -37,15 +33,12 @@ public class TestBaseHW12 {
                 System.getProperty("selenoidUrl", "selenoid.autotests.cloud")
         );
 
-
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
-
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
     @AfterEach
